@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/baseline_home_24"
+        android:title="Inicio"
+
+        />
+
+    <item
+        android:id="@+id/nav_eventos"
+        android:icon="@drawable/baseline_event_note_24"
+        android:title="Eventos"
+        />
+
+    <item
+        android:id="@+id/nav_addEvento"
+        android:icon="@drawable/baseline_event_available_24"
+        android:title="Agregar evento"
+
+        />
+
+    <item
+        android:id="@+id/nav_asistente"
+        android:icon="@drawable/baseline_assignment_ind_24"
+        android:title="Asistenes"
+
+        />
+
+    <item
+        android:id="@+id/nav_addAsistente"
+        android:icon="@drawable/baseline_plus_one_24"
+        android:title="Agregar asistente"
+
+        />
+
+
+
+
+
+
+</menu>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    android:background="@drawable/bckground"
+    tools:context=".AgregarAsistente">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="73dp"
+            android:layout_marginBottom="28dp"
+            android:fontFamily="casual"
+            android:text="Agregar asistente"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/inputNombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <EditText
+
+            android:id="@+id/inputNombre"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bck_cuadro_texto"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="Introduce el nombre"
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/inputPaterno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/inputPaterno"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="45dp"
+            android:background="@drawable/bck_cuadro_texto"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="Introduce el apellido paterno"
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/inputMaterno"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputNombre" />
+
+        <EditText
+            android:id="@+id/inputMaterno"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/bck_cuadro_texto"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="Introduce el apellido materno"
+            android:inputType="text"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/inputIdEvento"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPaterno" />
+
+        <Spinner
+            android:id="@+id/inputIdEvento"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="65dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginBottom="80dp"
+            android:background="@drawable/bck_cuadro_texto"
+            android:ems="10"
+            android:fontFamily="casual"
+            android:hint="Introdcue el id del evento"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/btnAgregarUnAsistente"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputMaterno" />
+
+
+
+        <Button
+            android:id="@+id/btnAgregarUnAsistente"
+            android:layout_width="147dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="75dp"
+
+            android:background="@drawable/botones_estilo"
+            android:fontFamily="casual"
+            android:text="Agregar"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegresarA"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputIdEvento" />
+
+        <Button
+            android:id="@+id/btnRegresarA"
+            android:layout_width="147dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="47dp"
+
+            android:layout_marginBottom="70dp"
+            android:background="@color/purple_200"
+            android:fontFamily="casual"
+            android:text="Regresar"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnAgregarUnAsistente" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>
+
+
